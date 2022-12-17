@@ -11,6 +11,7 @@
 This is a basic telegram bot.
 
 Before running this, you will need to install the python-telegram-bot library (https://github.com/python-telegram-bot/python-telegram-bot).
+### IMPORTANT!: you have to install it using the command: "pip install python-telegram-bot -U --pre" to install version 20, version 13 installs by default ###
 
 You will need to be a group admin to add the bot account to your tg group.
 
