@@ -8,7 +8,7 @@ import atoma, requests, datetime, dateutil
 
 
 groupChatID = "<groupChatID (in my example it was a unique number, you can grab it from the debug info)>"
-TOKEN = "<your token from the botfather(should looks similar to XXXX:YYYYYYYYYYY)>"
+TOKEN = "<your token from the botfather(should look similar to XXXX:YYYYYYYYYYY)>"
 
 #set up logging
 logging.basicConfig(
