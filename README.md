@@ -8,8 +8,12 @@
                                                                                                 
 ```
 
-This is a basic telegram bot using python-telegram-bot library (https://github.com/python-telegram-bot/python-telegram-bot).
+This is a basic telegram bot.
 
-If you want it to send files, create a directory called /memes wherever you run this file from and load it full of dank memes to share.
+Before running this, you will need to install the python-telegram-bot library (https://github.com/python-telegram-bot/python-telegram-bot).
+
+You will need to be admin to add the bot to the tg group.
+
+If you want it to send files to your group, create a directory called /memes wherever you run this file from and load it full of dank memes to share.
 
 Make sure the atom-file file just contains urls, one per line or things might break.
