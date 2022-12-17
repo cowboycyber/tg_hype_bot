@@ -12,7 +12,7 @@ This is a basic telegram bot.
 
 Before running this, you will need to install the python-telegram-bot library (https://github.com/python-telegram-bot/python-telegram-bot).
 
-You will need to be admin to add the bot to the tg group.
+You will need to be a group admin to add the bot account to your tg group.
 
 If you want it to send files to your group, create a directory called /memes wherever you run this file from and load it full of dank memes to share.
 
