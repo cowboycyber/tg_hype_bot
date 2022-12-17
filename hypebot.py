@@ -44,9 +44,11 @@ async def parse_a_feed(current_feed):
     now_date = datetime.datetime.utcnow()
     #print("WTFFFFFFFFF")
     print("###### NOW DATE: " + str(now_date))
+    #This looks for the timestame on the feed of each entry for the feed (called naivetime) and compares it with the current time.
     for j in current_feed.entries:
         naivetime = j.updated.replace(tzinfo=None)
         publishedWithinThreshold = now_date - naivetime < datetime.timedelta(seconds=30)
+           #If the entry was created within the last 60 seconds, print out some console info and send a message to the chat
         if publishedWithinThreshold:
             element = j.links[0]
             href = element.href
@@ -62,10 +64,12 @@ async def parse_a_feed(current_feed):
 #def parse_all(feeds):
 async def parse_all(feeds):
     print("###### Fetching feeds for the following urls: " + str(feeds))
+    # Go through each feed and call the parsing function on each one
     for i in feeds:
         response = requests.get(i)
         feed = atoma.parse_atom_bytes(response.content)
         print("Current feed is: " + str(feed.title))
+        #Call the feed parsing function and pass it the actual feed you just got back
         await parse_a_feed(feed)
 
 #Function to send arbitrary message to group chat
@@ -88,7 +92,8 @@ async def meme(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def dojob(context: ContextTypes.DEFAULT_TYPE) -> None:
   #just a test to see if we can set jobs
   print("####### JOB TRIGGERED #######")
-  values = await parse_all(feeds)
+    #Call parse_all and pass it the array of feeds
+  await parse_all(feeds)
 
 async def github(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
@@ -102,7 +107,6 @@ async def github(update: Update, context: ContextTypes.DEFAULT_TYPE):
       if (onOff == "off"):
         await context.bot.send_message(chat_id=update.effective_chat.id, text="Ok, I'll stop watching github for updates.")
         ##Add logic here to kill any jobs that are running related to githubparser stuff
-        #print("Let's try another way of looking at jobs to schedule for removal: " + str(context.job_queue.jobs()))
         #This next for loop ctually clears the jobs queue
         for job in context.job_queue.jobs():
           job.schedule_removal()
