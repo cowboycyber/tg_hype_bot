@@ -13,5 +13,3 @@ This is a basic telegram bot using python-telegram-bot library (https://github.c
 If you want it to send files, create a directory called /memes wherever you run this file from and load it full of dank memes to share.
 
 Make sure the atom-file file just contains urls, one per line or things might break.
-
-Special thanks to: GPT-3 AI Assistant
