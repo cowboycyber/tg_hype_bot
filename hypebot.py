@@ -40,7 +40,6 @@ with open('atom-feeds', 'r') as file:
 #linkstosend = []
 
 async def parse_a_feed(current_feed):
-    print("###### Fetching feeds for the following urls: " + str(feeds))
     #print("Current date is: " + str(datetime.datetime.utcnow()))
     now_date = datetime.datetime.utcnow()
     #print("WTFFFFFFFFF")
@@ -62,6 +61,7 @@ async def parse_a_feed(current_feed):
 
 #def parse_all(feeds):
 async def parse_all(feeds):
+    print("###### Fetching feeds for the following urls: " + str(feeds))
     for i in feeds:
         response = requests.get(i)
         feed = atoma.parse_atom_bytes(response.content)
