@@ -1,15 +1,11 @@
 ```
-
-
 .__                              ___.              __   
 |  |__   ___.__.______    ____   \_ |__    ____  _/  |_ 
 |  |  \ <   |  |\____ \ _/ __ \   | __ \  /  _ \ \   __\
 |   Y  \ \___  ||  |_> >\  ___/   | \_\ \(  <_> ) |  |  
 |___|  / / ____||   __/  \___  >  |___  / \____/  |__|  
      \/  \/     |__|         \/       \/                
-                                        
-
-                                                         
+                                                                                                
 ```
 
 This is a basic telegram bot using python-telegram-bot library (https://github.com/python-telegram-bot/python-telegram-bot).
